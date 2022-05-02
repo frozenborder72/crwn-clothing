@@ -1,7 +1,5 @@
 import { useState } from 'react'
 
-// import './sign-up-form.styles.scss'
-
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
@@ -22,8 +20,6 @@ const defaultFormFields = {
 const SignUpForm = () => {
   const [formFieds, setFormFields] = useState(defaultFormFields)
   const { displayName, email, password, confirmPassword } = formFieds
-
-  console.log(formFieds)
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields)
@@ -97,9 +93,7 @@ const SignUpForm = () => {
           value={confirmPassword}
         />
 
-        <Button buttonType="inverted" type="submit">
-          Sign up
-        </Button>
+        <Button type="submit">Sign up</Button>
       </form>
     </div>
   )
